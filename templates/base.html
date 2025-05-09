@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mi Sitio Web</title>
+    <link rel="stylesheet" href="../static/style1.css">
+  </head>
+
+  <body>
+    <div class="wrapper">
+    <header>
+      <nav>
+        <ul>
+          <li class="inicio"><a href="{{ url_for('inicio') }}">Inicio</a></li>
+          <li><a href="{{ url_for('mis_proyectos') }}">Mis Proyectos</a></li>
+          <li><a href="{{ url_for('contacto') }}">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="contenido">
+        {% block contenido %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+      <p>© 2025 - Mi sitio web</p>
+    </footer>
+</div>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+/* Aseguramos que html y body ocupen toda la altura */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(122, 116, 116);
+}
+
+/* Este contenedor usa flexbox vertical para forzar el footer al fondo */
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* El main se expande para ocupar el espacio entre header y footer */
+.contenido {
+    flex: 1;
+    width: 800px;
+    margin: 35px auto;
+    background: rgb(237, 208, 208);
+    padding: 95px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: left;
+}
+nav {
+    background-color:  rgb(184, 180, 180);
+    padding: 15px;
+    text-align:right;   
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+     display: inline;
+    margin: 0 45px;
+}
+
+
+nav ul li a {
+    color: #8f5e71;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+.btn :hover{
+    text-decoration: double;
+}
+   
+.btn{
+    border-radius: 10px;
+    background-color: #8f5e71;
+    padding: 10px;
+}
+
+
+
+/* Footer normal, no fixed */
+.footer {
+    background-color: #aea9a928;
+    color: rgb(211, 206, 206);
+    text-align: center;
+    padding: 30px;
+}
+
