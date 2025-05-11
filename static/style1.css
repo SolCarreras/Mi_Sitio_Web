@@ -1,4 +1,4 @@
-/* Aseguramos que html y body ocupen toda la altura */
+/* Aseguramos que html y body ocupen toda la altura -BASE- */
 html, body {
     height: 100%;
     margin: 0;
@@ -52,6 +52,8 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+
+/* Index*/
 .inicio-container {
     display: flex;
     align-items: center;
@@ -68,6 +70,8 @@ nav ul li a:hover {
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+
+/* Contacto */
 
 .boton-contacto {
     display: inline-block;
@@ -127,7 +131,48 @@ nav ul li a:hover {
     size: 35px;
     color: #422631;
 }
+
+/* Mis-Proyectos */
    
+.proyectos {
+    padding: 40px;
+    text-align: center;
+}
+
+.grid-proyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.proyecto {
+    background-color: #f5e3e3;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.proyecto:hover {
+    transform: translateY(-5px);
+}
+
+.proyecto img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.proyecto h3 {
+    color: #8f5e71;
+    margin-top: 15px;
+}
+
+.proyecto p {
+    color: #5c5c5c;
+}
 
 
 

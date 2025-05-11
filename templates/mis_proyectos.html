@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+  <section class="proyectos">
+    <h2>Mis Proyectos</h2>
+
+    <div class="grid-proyectos">
+      <div class="proyecto">
+        <img src="{{ url_for('static', filename='img/proyecto1.webp') }}" alt="Proyecto 1">
+        <h3>Proyecto 1</h3>
+        <p>Trabajando con base de datos, java y css.</p>
+      </div>
+
+      <div class="proyecto">
+        <img src="{{ url_for('static', filename='img/proyecto2.webp') }}" alt="Proyecto 2">
+        <h3>Proyecto 2</h3>
+        <p>Otro proyecto con tecnologías como Flask y SQL Server.</p>
+      </div>
+      <!-- Agregás más proyectos fácilmente copiando este bloque -->
+    </div>
+  </section>
+{% endblock %}
