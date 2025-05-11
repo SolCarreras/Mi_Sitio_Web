@@ -1,7 +1,15 @@
 {% extends "base.html" %}
 
 {% block contenido %}
-<h1>Bienvenido a mi sitio</h1>
-<p>Esta es la página de inicio.</p>
-<button class="btn" type="button">Contactame</button>
+<div class="inicio-container">
+  <div class="inicio-texto">
+    <h1>¡Hola! Soy Antonela</h1>
+    <p>Bienvenida a mi sitio. Aquí encontrarás mis proyectos y formas de contactarme.</p>
+    <a href="{{ url_for('contacto') }}" class="boton-contacto">Contactarme</a>
+  </div>
+  <div class="inicio-imagen">
+    <img src="{{ url_for('static', filename='portafolio.jpg') }}" alt="Foto de Antonela">
+  </div>
+</div>
 {% endblock %}
+

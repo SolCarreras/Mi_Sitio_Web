@@ -19,7 +19,7 @@ html, body {
     width: 800px;
     margin: 35px auto;
     background: rgb(237, 208, 208);
-    padding: 95px;
+    padding: 55px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     text-align: left;
@@ -51,15 +51,86 @@ nav ul li a {
 nav ul li a:hover {
     text-decoration: underline;
 }
-.btn :hover{
-    text-decoration: double;
+
+.inicio-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.inicio-texto {
+    flex: 1;
+}
+
+.inicio-imagen img {
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.boton-contacto {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #8f5e71;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.boton-contacto:hover {
+    background-color: #6d4656;
+}
+
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    color: #5c5c5c;
+}
+
+.formulario-contacto input[type="text"],
+.formulario-contacto textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #f5f5f5;
+}
+
+.formulario-contacto input[type="submit"] {
+    background-color: #8f5e71;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.formulario-contacto input[type="submit"]:hover {
+    background-color: #7d4f60;
+}
+
+.confirmacion {
+    background-color: #dff0d8;
+    color: #3c763d;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.contacto{
+    size: 35px;
+    color: #422631;
 }
    
-.btn{
-    border-radius: 10px;
-    background-color: #8f5e71;
-    padding: 10px;
-}
+
+
+
 
 
 
@@ -68,6 +139,6 @@ nav ul li a:hover {
     background-color: #aea9a928;
     color: rgb(211, 206, 206);
     text-align: center;
-    padding: 30px;
+    padding: 10px;
 }
 

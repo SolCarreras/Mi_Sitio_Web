@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+<h2 class="contacto">Contacto</h2>
+{% if mensaje %}
+    <p class="confirmacion">{{ mensaje }}</p>
+{% endif %}
+<form method="POST" action="{{ url_for('contacto') }}" class="formulario-contacto">
+    <label for="nombre_apellido">Nombre y Apellido:</label>
+    <input type="text" id="nombre_apellido" name="nombre_apellido" required>
+
+    <label for="telefono">Teléfono:</label>
+    <input type="text" id="telefono" name="telefono" required>
+
+    <label for="mensaje">Mensaje:</label>
+    <textarea id="mensaje" name="mensaje" placeholder="Contanos tus ideas" required></textarea>
+
+    <input type="submit" value="Enviar">
+</form>
+{% endblock %}
