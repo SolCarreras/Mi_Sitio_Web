@@ -6,9 +6,6 @@ app = Flask(__name__)
 
 
 
-# Conexión a SQL Server
-def conexion_bd():
-    return pyodbc.connect('DRIVER={SQL Server};SERVER=DESKTOP-BQLA1M6\\SQLEXPRESS07;DATABASE=MiSitio;Trusted_Connection=yes;')
 
 @app.route('/contacto', methods=['GET', 'POST'])
 def contacto():
