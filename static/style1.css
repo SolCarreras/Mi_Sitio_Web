@@ -4,6 +4,7 @@ html, body {
     margin: 0;
     padding: 0;
     background-color: rgb(122, 116, 116);
+ 
 }
 
 /* Este contenedor usa flexbox vertical para forzar el footer al fondo */

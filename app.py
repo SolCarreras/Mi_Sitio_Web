@@ -1,14 +1,30 @@
-import pyodbc
 
 from flask import Flask, render_template,request
 
 app = Flask(__name__)
 
 
+# app.py (fragmento)
+import os
+from dotenv import load_dotenv
+import pyodbc
 
-# Conexión a SQL Server
+load_dotenv()  # carga .env en entorno (solo en desarrollo)
+
 def conexion_bd():
-    return pyodbc.connect('DRIVER={SQL Server};SERVER=DESKTOP-BQLA1M6\\SQLEXPRESS07;DATABASE=MiSitio;Trusted_Connection=yes;')
+    server = os.getenv("DB_SERVER")
+    database = os.getenv("DB_NAME")
+    trusted = os.getenv("DB_TRUSTED", "yes").lower()  # yes/no
+
+    if trusted in ("yes", "true", "1"):
+        conn_str = f"DRIVER={{SQL Server}};SERVER={server};DATABASE={database};Trusted_Connection=yes;"
+    else:
+        user = os.getenv("DB_USER")
+        password = os.getenv("DB_PASSWORD")
+        conn_str = f"DRIVER={{SQL Server}};SERVER={server};DATABASE={database};UID={user};PWD={password};"
+
+    return pyodbc.connect(conn_str)
+
 
 @app.route('/contacto', methods=['GET', 'POST'])
 def contacto():
